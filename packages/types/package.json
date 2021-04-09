@@ -1,0 +1,28 @@
+{
+  "name": "@fhelpers/types",
+  "version": "0.1.0",
+  "description": "Components types and interfaces",
+  "homepage": "https://github.com/bh2tech/fhelpers/tree/master/packages/types#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bh2tech/fhelpers.git",
+    "directory": "packages/types"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "prepare": "yarn build"
+  },
+  "types": "dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/bh2tech/fhelpers/issues"
+  }
+}

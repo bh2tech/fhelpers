@@ -1,0 +1,31 @@
+{
+  "exclude": ["node_modules", "dist", "build", "scripts"],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitAny": false,
+    "outDir": "lib",
+    "paths": {
+      "@fhelpers/core": ["packages/core"],
+      "@fhelpers/styles": ["packages/styles"]
+    },
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5",
+    "typeRoots": ["./packages/core/@types"]
+  }
+}
