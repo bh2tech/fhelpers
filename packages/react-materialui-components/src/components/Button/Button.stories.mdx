@@ -1,0 +1,31 @@
+import {
+  Meta,
+  Story,
+  Description,
+  Preview,
+  Props,
+} from '@storybook/addon-docs/blocks'
+import { withKnobs } from '@storybook/addon-knobs'
+import { withA11y } from '@storybook/addon-a11y'
+
+import Docs from '@fhelpers/core/docs/Button.md'
+
+import { Button } from '.'
+
+<Meta title="Components/Button" component={Button} />
+
+<Description>{Docs}</Description>
+
+## Loading state
+
+<Preview>
+  <Story name="Loading state" decorators={[withKnobs, withA11y]}>
+    <Button loading={true} variant="contained" fullWidth>
+      Loading example
+    </Button>
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Button} />
