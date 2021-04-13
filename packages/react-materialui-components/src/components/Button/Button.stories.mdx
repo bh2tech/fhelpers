@@ -7,6 +7,7 @@ import {
 } from '@storybook/addon-docs/blocks'
 import { withKnobs } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
+import Box from '@material-ui/core/Box'
 
 import Docs from '@fhelpers/core/docs/Button.md'
 
@@ -20,9 +21,7 @@ import { Button } from '.'
 
 <Preview>
   <Story name="Loading state" decorators={[withKnobs, withA11y]}>
-    <Button loading={true} variant="contained" fullWidth>
-      Loading example
-    </Button>
+    <Button loading={true}>Loading example</Button>
   </Story>
 </Preview>
 
