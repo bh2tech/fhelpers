@@ -1,0 +1,71 @@
+import {
+  Meta,
+  Story,
+  Description,
+  Preview,
+  Props,
+} from '@storybook/addon-docs/blocks'
+import { withKnobs } from '@storybook/addon-knobs'
+import { withA11y } from '@storybook/addon-a11y'
+
+import Docs from '@fhelpers/core/docs/TextField.md'
+
+import { TextField } from '.'
+
+<Meta title="Forms/TextField" component={TextField} />
+
+<Description>{Docs}</Description>
+
+### CPF
+
+<Preview>
+  <Story name="CPF">
+    <span>lorem</span>
+  </Story>
+</Preview>
+
+### CNPJ
+
+<Preview>
+  <Story name="CNPJ">
+    <span>lorem</span>
+  </Story>
+</Preview>
+
+### Currency
+
+<Preview>
+  <Story name="Currency">
+    <span>lorem</span>
+  </Story>
+</Preview>
+
+### Mobile
+
+<Preview>
+  <Story name="Mobile">
+    <span>lorem</span>
+  </Story>
+</Preview>
+
+### ZipCode
+
+<Preview>
+  <Story name="ZipCode">
+    <span>lorem</span>
+  </Story>
+</Preview>
+
+### Date of birth
+
+<Preview>
+  <Story name="Date of birth">
+    <span>lorem</span>
+  </Story>
+</Preview>
+
+---
+
+# Props
+
+<Props of={TextField} />

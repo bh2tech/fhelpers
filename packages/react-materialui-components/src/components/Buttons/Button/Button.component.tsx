@@ -7,9 +7,9 @@ import { ButtonProps } from './Button.type'
 
 export const Button: React.FunctionComponent<
   ButtonProps & React.HTMLProps<HTMLDivElement>
-> = ({ loading, children, ...restProps }) => {
+> = ({ loading, children, onClick, ...restProps }) => {
   return (
-    <ButtonMaterial {...restProps}>
+    <ButtonMaterial {...restProps} onClick={!loading ? onClick : undefined}>
       {loading && <CircularProgress />}
 
       {!loading && children}

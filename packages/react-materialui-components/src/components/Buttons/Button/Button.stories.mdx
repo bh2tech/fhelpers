@@ -8,22 +8,25 @@ import {
 import { withKnobs } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
 import Box from '@material-ui/core/Box'
+import Button2 from '@material-ui/core/Button'
 
 import Docs from '@fhelpers/core/docs/Button.md'
 
 import { Button } from '.'
 
-<Meta title="Components/Button" component={Button} />
+<Meta title="Buttons/Button" component={Button} />
 
 <Description>{Docs}</Description>
 
-## Loading state
+### Loading
 
 <Preview>
-  <Story name="Loading state" decorators={[withKnobs, withA11y]}>
+  <Story name="Loading">
     <Button loading={true}>Loading example</Button>
   </Story>
 </Preview>
+
+---
 
 # Props
 
