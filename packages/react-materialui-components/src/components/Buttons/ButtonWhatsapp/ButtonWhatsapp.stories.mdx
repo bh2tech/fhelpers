@@ -10,12 +10,18 @@ import { withA11y } from '@storybook/addon-a11y'
 
 import Docs from '@fhelpers/core/docs/TextField.md'
 
+import { ButtonWhatsapp } from './'
+
 <Meta title="Buttons/ButtonWhatsapp" />
 
-### Base
+### Button WhatsApp
 
 <Preview>
   <Story name="Base">
-    <span>lorem</span>
+    <ButtonWhatsapp number={85987324994} />
   </Story>
 </Preview>
+
+# Props
+
+<Props of={ButtonWhatsapp} />
