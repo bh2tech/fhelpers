@@ -1,1 +1,1 @@
-export * from './components/HelloWorld'
+export const tt = () => undefined

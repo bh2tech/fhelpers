@@ -16,11 +16,19 @@ import { TextField } from '.'
 
 <Description>{Docs}</Description>
 
+### Base
+
+<Preview>
+  <Story name="Base">
+    <TextField fullWidth variant="outlined" label="Base" />
+  </Story>
+</Preview>
+
 ### CPF
 
 <Preview>
   <Story name="CPF">
-    <span>lorem</span>
+    <TextField mask="cpf" fullWidth variant="outlined" label="CPF" />
   </Story>
 </Preview>
 
@@ -28,7 +36,7 @@ import { TextField } from '.'
 
 <Preview>
   <Story name="CNPJ">
-    <span>lorem</span>
+    <TextField mask="cnpj" fullWidth variant="outlined" label="CNPJ" />
   </Story>
 </Preview>
 
@@ -36,7 +44,7 @@ import { TextField } from '.'
 
 <Preview>
   <Story name="Currency">
-    <span>lorem</span>
+    <TextField mask="currency" fullWidth variant="outlined" label="Currency" />
   </Story>
 </Preview>
 
@@ -44,7 +52,7 @@ import { TextField } from '.'
 
 <Preview>
   <Story name="Mobile">
-    <span>lorem</span>
+    <TextField mask="mobile" fullWidth variant="outlined" label="Mobile" />
   </Story>
 </Preview>
 
@@ -52,7 +60,7 @@ import { TextField } from '.'
 
 <Preview>
   <Story name="ZipCode">
-    <span>lorem</span>
+    <TextField mask="zipcode" fullWidth variant="outlined" label="Zipcode" />
   </Story>
 </Preview>
 
@@ -60,7 +68,12 @@ import { TextField } from '.'
 
 <Preview>
   <Story name="Date of birth">
-    <span>lorem</span>
+    <TextField
+      mask="date_of_birth"
+      fullWidth
+      variant="outlined"
+      label="Date of birth"
+    />
   </Story>
 </Preview>
 
