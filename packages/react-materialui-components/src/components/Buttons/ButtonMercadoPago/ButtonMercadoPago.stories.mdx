@@ -8,14 +8,24 @@ import {
 import { withKnobs } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
 
-import Docs from '@fhelpers/core/docs/TextField.md'
+import Docs from '@fhelpers/core/docs/ButtonMercadoPago.md'
 
-<Meta title="Buttons/ButtonMercadoPago" />
+import { ButtonMercadoPago } from '.'
+
+<Meta title="Buttons/ButtonMercadoPago" component={ButtonMercadoPago} />
+
+<Description>{Docs}</Description>
 
 ### Base
 
 <Preview>
   <Story name="Base">
-    <span>lorem</span>
+    <ButtonMercadoPago globalId="adsasad" />
   </Story>
 </Preview>
+
+---
+
+# Props
+
+<Props of={ButtonMercadoPago} />
