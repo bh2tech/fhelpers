@@ -1,0 +1,50 @@
+import {
+  Meta,
+  Story,
+  Description,
+  Preview,
+  Props,
+} from '@storybook/addon-docs/blocks'
+
+import Docs from '@fhelpers/core/docs/Text.md'
+import { Text } from '.'
+
+<Meta title="Texts/Text" component={Text} />
+
+<Description>{Docs}</Description>
+
+### Text
+
+<Preview>
+  <Story name="Text">
+    <Text>Default Text</Text>
+  </Story>
+</Preview>
+
+### Title
+
+<Preview>
+  <Story name="Title">
+    <Text context="title">Title Text!</Text>
+  </Story>
+</Preview>
+
+### Subtitle
+
+<Preview>
+  <Story name="Subtitle">
+    <Text context="subtitle">Subtitle Text!</Text>
+  </Story>
+</Preview>
+
+### Description
+
+<Preview>
+  <Story name="Description">
+    <Text context="description">Description Text!</Text>
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Text} />
