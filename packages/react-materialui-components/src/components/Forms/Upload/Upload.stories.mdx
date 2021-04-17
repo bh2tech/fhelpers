@@ -8,7 +8,7 @@ import {
 import { withKnobs } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
 
-import Docs from '@fhelpers/core/docs/TextField.md'
+import { Upload } from './Upload.component.tsx'
 
 <Meta title="Forms/Upload" />
 
@@ -16,6 +16,12 @@ import Docs from '@fhelpers/core/docs/TextField.md'
 
 <Preview>
   <Story name="Base">
-    <span>lorem</span>
+    <Upload onDrop={(args) => console.log(args)} />
   </Story>
 </Preview>
+
+---
+
+# Props
+
+<Props of={Upload} />
