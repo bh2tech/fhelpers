@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import classNames from 'classnames'
 
 import { componentProps } from './Text.type'
 
@@ -32,9 +33,9 @@ const useStyles = makeStyles({
 export const Text: React.FC<componentProps> = ({
   size,
   children,
-  style,
   tag,
   context,
+  ...restProps
 }) => {
   const classes = useStyles()
 
@@ -62,11 +63,12 @@ export const Text: React.FC<componentProps> = ({
 
   return (
     <Typography
+      {...restProps}
       component={stylesDefault[context as any]?.tag || tag || 'span'}
-      className={
+      className={classNames(
+        restProps.className,
         classes[stylesDefault[context as any]?.size] || classes[size || 'sm']
-      }
-      style={{ ...style }}
+      )}
     >
       {children}
     </Typography>
