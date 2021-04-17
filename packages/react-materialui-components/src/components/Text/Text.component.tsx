@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -34,10 +34,40 @@ export const Text: React.FC<componentProps> = ({
   children,
   style,
   tag,
+  context,
 }) => {
   const classes = useStyles()
+
+  const stylesDefault = useMemo(
+    () => ({
+      title: {
+        tag: 'h2',
+        size: 'xl',
+      },
+      subtitle: {
+        tag: 'h3',
+        size: 'md',
+      },
+      description: {
+        tag: 'p',
+        size: 'sm',
+      },
+      text: {
+        tag: 'span',
+        size: 'xs',
+      },
+    }),
+    []
+  )
+
   return (
-    <Typography component={tag} className={classes[size]} style={{ ...style }}>
+    <Typography
+      component={stylesDefault[context as any]?.tag || tag || 'span'}
+      className={
+        classes[stylesDefault[context as any]?.size] || classes[size || 'sm']
+      }
+      style={{ ...style }}
+    >
       {children}
     </Typography>
   )
