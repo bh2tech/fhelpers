@@ -5,17 +5,31 @@ import {
   Preview,
   Props,
 } from '@storybook/addon-docs/blocks'
-import { withKnobs } from '@storybook/addon-knobs'
-import { withA11y } from '@storybook/addon-a11y'
 
-import Docs from '@fhelpers/core/docs/TextField.md'
+import Docs from '@fhelpers/core/docs/Image.md'
 
-<Meta title="Miscellaneous/Image" />
+import { Image } from '.'
 
-### Base
+<Meta title="Miscellaneous/Image" component={Image} />
+
+<Description>{Docs}</Description>
+
+### Default
 
 <Preview>
-  <Story name="Base">
-    <span>lorem</span>
+  <Story name="Default">
+    <Image />
   </Story>
 </Preview>
+
+### Image
+
+<Preview>
+  <Story name="Image">
+    <Image src="https://picsum.photos/200" />
+  </Story>
+</Preview>
+
+# Props
+
+<Props of={Image} />
