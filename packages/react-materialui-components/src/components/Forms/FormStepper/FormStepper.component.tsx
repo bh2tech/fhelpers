@@ -133,7 +133,7 @@ export const FormStepper: React.FC<FormStepperProps> = ({
 
       {footer && (
         <Grid item xs={12}>
-          <Grid container justify="flex-end">
+          <Grid container justify="flex-end" spacing={3}>
             {hasPrevStep && (
               <Grid item xs={6} className={classNames(classes.center)}>
                 <Button
