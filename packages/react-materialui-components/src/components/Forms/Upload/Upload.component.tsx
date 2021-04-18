@@ -10,7 +10,7 @@ import { UploadProps } from './Upload.type'
 
 const messages = {
   title: 'Arraste para cá',
-  subTitle: 'Ou se prefir',
+  subTitle: 'Ou se preferir',
   buttonText: 'Clique para selecionar',
 }
 

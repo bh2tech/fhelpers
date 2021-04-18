@@ -1,0 +1,40 @@
+import {
+  Meta,
+  Story,
+  Description,
+  Preview,
+  Props,
+} from '@storybook/addon-docs/blocks'
+import { withKnobs } from '@storybook/addon-knobs'
+import { withA11y } from '@storybook/addon-a11y'
+
+import Box from '@material-ui/core/Box'
+
+import Docs from '@fhelpers/core/docs/TextField.md'
+
+import { FormStepper } from '.'
+
+<Meta title="Forms/FormStepper" />
+
+### Base
+
+<Preview>
+  <Story name="Base">
+    <FormStepper
+      steps={['initial', 'middle', 'final']}
+      handleNext={() => new Promise((res) => setTimeout(res, 2000))}
+    >
+      {({ currentStepName }) => (
+        <Box align="center">
+          <span>{currentStepName}</span>
+        </Box>
+      )}
+    </FormStepper>
+  </Story>
+</Preview>
+
+---
+
+# Props
+
+<Props of={FormStepper} />
