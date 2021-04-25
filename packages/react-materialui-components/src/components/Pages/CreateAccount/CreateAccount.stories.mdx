@@ -10,12 +10,60 @@ import { withA11y } from '@storybook/addon-a11y'
 
 import Docs from '@fhelpers/core/docs/TextField.md'
 
+import { TextField } from '../../Forms/TextField'
+import { ButtonSocial } from '../../Buttons/ButtonSocial'
+
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+
 <Meta title="Pages/Create Account" />
 
 ### Base
 
 <Preview>
   <Story name="Base">
-    <span>lorem</span>
+    <Box display="flex" flexDirection="column" gridGap={32}>
+      <Box display="flex" justifyContent="center">
+        <img src="https://via.placeholder.com/150" />
+      </Box>
+      <Card style={{ margin: '0 auto' }}>
+        <CardContent>
+          <Box
+            display="flex"
+            flexDirection="column"
+            gridGap={24}
+            minWidth={500}
+          >
+            <TextField fullWidth variant="outlined" label="Nome" />
+            <TextField
+              mask="mobile"
+              fullWidth
+              variant="outlined"
+              label="Telefone"
+            />
+            <TextField fullWidth variant="outlined" label="E-mail" />
+            <TextField
+              fullWidth
+              variant="outlined"
+              label="Senha"
+              type="password"
+            />
+            <Button fullWidth variant="contained" color="primary">
+              Cadastrar
+            </Button>
+            <Typography align="center" color="textSecondary" variant="caption">
+              ou
+            </Typography>
+            <Box display="flex" gridGap={16}>
+              <ButtonSocial social="google" />
+              <ButtonSocial social="facebook" />
+            </Box>
+          </Box>
+        </CardContent>
+      </Card>
+    </Box>
   </Story>
 </Preview>
