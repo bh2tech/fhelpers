@@ -1,0 +1,53 @@
+import {
+  Meta,
+  Story,
+  Description,
+  Preview,
+  Props,
+} from '@storybook/addon-docs/blocks'
+import { withKnobs } from '@storybook/addon-knobs'
+import { withA11y } from '@storybook/addon-a11y'
+
+import Docs from '@fhelpers/core/docs/TextField.md'
+
+import Card from '@material-ui/core/Card'
+import CardContent from '@material-ui/core/CardContent'
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
+
+<Meta title="Pages/404" />
+
+### Base
+
+<Preview>
+  <Story name="Base">
+    <Card>
+      <CardContent>
+        <Box display="flex" flexDirection="column" gridGap={24}>
+          <Box>
+            <Typography align="center" variant="h4">
+              404: The page you are looking for isn’t here
+            </Typography>
+            <Typography
+              align="center"
+              variant="subtitle2"
+              color="textSecondary"
+            >
+              You either tried some shady route or you came here by mistake.
+              Whichever it is, try using the navigation.
+            </Typography>
+          </Box>
+          <Box display="flex" justifyContent="center">
+            <img src="https://via.placeholder.com/300" />
+          </Box>
+          <Box display="flex" justifyContent="center">
+            <Button color="primary" variant="outlined">
+              Back to home
+            </Button>
+          </Box>
+        </Box>
+      </CardContent>
+    </Card>
+  </Story>
+</Preview>
