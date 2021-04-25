@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     border: '1px solid #CDD3DC',
     boxSizing: 'border-box',
     backgroundImage: `url(${googleIcon})`,
-    backgroundPosition: '30px center',
+    backgroundPosition: '5px 8px',
     '&:hover': {
       backgroundColor: '#FFFFFF',
     },
@@ -33,7 +33,7 @@ const useStyles = makeStyles({
     color: '#FFFFFF',
     backgroundColor: '#4469B0',
     backgroundImage: `url(${iconFacenbook})`,
-    backgroundPosition: '40px center',
+    backgroundPosition: '10px center',
     '&:hover': {
       backgroundColor: '#4469B0',
     },
