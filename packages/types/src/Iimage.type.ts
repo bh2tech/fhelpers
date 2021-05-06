@@ -1,4 +1,3 @@
 export interface Iimage {
-  src?: string
-  style?: any
+  src: string
 }
