@@ -10,12 +10,18 @@ import { withA11y } from '@storybook/addon-a11y'
 
 import Docs from '@fhelpers/core/docs/TextField.md'
 
+import { LightBoxContainer } from '.'
+
 <Meta title="Miscellaneous/Lightbox" />
 
 ### Base
 
 <Preview>
   <Story name="Base">
-    <span>lorem</span>
+    <LightBoxContainer mainSrc="https://picsum.photos/300" isOpen={false} />
   </Story>
 </Preview>
+
+# Props
+
+<Props of={LightBoxContainer} />
