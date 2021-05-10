@@ -2,46 +2,37 @@ import React from 'react'
 
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import { storiesOf } from '@storybook/react'
 import Lightbox from 'react-image-lightbox'
-
 import 'react-image-lightbox/style.css'
 
 import { Image } from '../Image'
 
 import { componentProps } from './LightBox.type'
 
-const LightBoxComponent: React.FC<
+export const LightBoxComponent: React.FC<
   componentProps & React.HTMLProps<HTMLDivElement>
-> = ({ mainSrc, isOpen, setIsOpen }) => {
+> = ({ mainSrc, isOpen, onCloseRequest }) => {
   return (
     <>
-      <Button onClick={() => setIsOpen(true)}>
+      <Button>
         <Image src={mainSrc} alt="image" />
       </Button>
-      {isOpen && (
-        <Lightbox mainSrc={mainSrc} onCloseRequest={() => setIsOpen(false)} />
-      )}
+      {isOpen && <Lightbox mainSrc={mainSrc} onCloseRequest={onCloseRequest} />}
     </>
   )
 }
 
-export const LightBoxContainer: React.FC<componentProps> = ({
-  isOpen,
-  mainSrc,
-}) => {
-  const [state, setState] = React.useState(isOpen)
-  return (
-    <Box
-      component="div"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <LightBoxComponent
-        mainSrc={mainSrc}
-        isOpen={state}
-        setIsOpen={setState}
-      />
-    </Box>
-  )
-}
+const stories = storiesOf('MISCELLANEOUS|LightBox/LightBox', module)
+
+stories.addDecorator(withKnobs)
+stories.add('Base', () => (
+  <LightBoxComponent
+    mainSrc={text('Image Url', 'https://picsum.photos/300')}
+    isOpen={boolean('Active', false)}
+    onCloseRequest={() => {
+      return
+    }}
+  />
+))
