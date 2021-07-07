@@ -5,17 +5,28 @@ import {
   Preview,
   Props,
 } from '@storybook/addon-docs/blocks'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
-
 import Docs from '@fhelpers/core/docs/TextField.md'
+import Typography from '@material-ui/core/Typography'
+import { LightBoxComponent } from '.'
 
 <Meta title="Miscellaneous/Lightbox" />
 
 ### Base
 
 <Preview>
-  <Story name="Base">
-    <span>lorem</span>
+  <Story name="Testing">
+    <LightBoxComponent
+      mainSrc={text('Image Url', 'https://picsum.photos/300')}
+      isOpen={boolean('Active', false)}
+      onCloseRequest={() => {
+        return
+      }}
+    />
   </Story>
 </Preview>
+
+# Props
+
+<Props of={LightBoxComponent} />

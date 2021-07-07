@@ -8,14 +8,51 @@ import {
 import { withKnobs } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
 
-import Docs from '@fhelpers/core/docs/TextField.md'
+import Docs from '@fhelpers/core/docs/Header.md'
+
+import Box from '@material-ui/core/Box'
+import TextField from '@material-ui/core/TextField'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import { Header } from '.'
+import { Image } from '@fhelpers/react-materialui-components/src/components/Miscellaneous/Image'
 
 <Meta title="Miscellaneous/Header" />
+
+<Description>{Docs}</Description>
 
 ### Base
 
 <Preview>
   <Story name="Base">
-    <span>lorem</span>
+    <Header
+      leftArea={
+        <Image
+          src="https://dev.viajjar.com.br/static/media/logo_viajjar-grande.1af8deb8.png"
+          style={{ width: 102, height: 47 }}
+        />
+      }
+      rightArea={
+        <Box>
+          <List component="nav">
+            <Box component="ul" display="flex">
+              <ListItem button>
+                <p>Inicio</p>
+              </ListItem>
+              <ListItem button>
+                <p>Sobre</p>
+              </ListItem>
+              <ListItem button>
+                <p>Teste</p>
+              </ListItem>
+            </Box>
+          </List>
+        </Box>
+      }
+    />
   </Story>
 </Preview>
+
+# Props
+
+<Props of={Header} />
